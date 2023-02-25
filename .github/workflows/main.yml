@@ -1,1 +1,26 @@
-
+on:
+  push:
+   branches:
+    - 'main'
+jobs:
+  build:
+    name: Build
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Node.js 12.16.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.16.1
+      - name: Install dependencies
+        run: npm install
+      - name: where are we
+        run: ls -lash
+      - name: Install pod dependencies
+        run: |
+          cd ios && pod install    
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
+      - name: Xcode Version
+        run: /usr/bin/xcodebuild -version
