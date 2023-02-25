@@ -1,0 +1,9 @@
+- name: react-native-build-ios
+  uses: AustinMcGuinn/react-native-build-ios@v1.0.0
+- name: React Native Build
+  uses: bamachoub/react-native-build-action@v1.0.0
+- name: Super-Linter
+  uses: github/super-linter@v4.10.1
+- name: Official SonarQube Scan
+  uses: SonarSource/sonarqube-scan-action@v1.2.0
+
