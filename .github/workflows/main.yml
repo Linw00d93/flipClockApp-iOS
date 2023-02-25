@@ -19,7 +19,7 @@ jobs:
         run: ls -lash
       - name: Install pod dependencies
         run: |
-          cd ios && pod install    
+          cd myFlipClockApp/ios && pod install    
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
       - name: Xcode Version
