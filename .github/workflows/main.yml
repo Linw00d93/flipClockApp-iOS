@@ -24,3 +24,5 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
       - name: Xcode Version
         run: /usr/bin/xcodebuild -version
+      - name: let see 
+        run: cd myFlipClockApp && npx react-native run-ios --simulator="iPhone 14"
