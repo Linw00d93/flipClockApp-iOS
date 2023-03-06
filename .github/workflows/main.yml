@@ -25,4 +25,5 @@ jobs:
       - name: Xcode Version
         run: /usr/bin/xcodebuild -version
       - name: let see 
-        run: cd testiOSApp && npx react-native run-ios --simulator="iPhone 14"
+        run: cd testiOSApp/ios/ && xcodebuild archive -scheme testiOSApp -sdk iphoneos -allowProvisioningUpdates -archivePath testingiOSApp.xcarchive
+
